@@ -59,6 +59,13 @@ function showQuestion(question) {
 function resetState() {
   clearStatusClass(document.body); // Xóa trạng thái đúng/sai trên body
   nextButton.classList.add("hide"); // Ẩn nút Next
+  
+  // ẨN CẢ BẢN DỊCH CÂU HỎI VÀ CÂU TRẢ LỜI KHI ĐI ĐẾN CÂU HỎI MỚI
+  translatedQuestionElement.classList.add("hide");
+  translatedQuestionElement.innerText = "";
+  translatedAnswersElement.classList.add("hide");
+  translatedAnswersElement.innerText = "";
+
   // Xóa tất cả các nút trả lời cũ
   while (answerButtonsElement.firstChild) {
     answerButtonsElement.removeChild(answerButtonsElement.firstChild);
